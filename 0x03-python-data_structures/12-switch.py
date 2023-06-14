@@ -1,10 +1,6 @@
 #!/usr/bin/python3
+#!/usr/bin/python3
 a = 89
 b = 10
-# Your code starts here
-a = a ^ b
-b = a ^ b
-a = a ^ b
-# Your code ends here
+a, b = b, a
 print("a={:d} - b={:d}".format(a, b))
-
