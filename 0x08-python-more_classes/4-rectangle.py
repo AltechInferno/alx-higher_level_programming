@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 
-class that defines a Rectangle
+a class that defines a Rectangle
 
 
 """
@@ -11,50 +11,17 @@ class Rectangle:
     """ defines a rectangle """
 
     def __init__(self, width=0, height=0):
-        """ initialize the instance
+        """ initializes the instance
 
         Args:
-            height: rectangle height
             width: rectangle width
+            height: rectangle height
 
 
         """
-        
-        self.height = height
+
         self.width = width
-
-    @property
-    def height(self):
-        """ returns the value of the height
-
-        Returns:
-            rectangle height
-
-
-        """
-
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        """ defines the height
-
-        Args:
-            value: height
-
-        Raises:
-            TypeError: if height is not an integer
-            ValueError: if height is less than zero
-
-
-        """
-
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = value
-
+        self.height = height
 
     @property
     def width(self):
@@ -88,9 +55,51 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
+    @property
+    def height(self):
+        """ returns the value of the height
 
-        def perimeter(self):
-        """ calculates the Rectangular perimeter
+        Returns:
+            rectangle height
+
+
+        """
+
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """ defines the height
+
+        Args:
+            value: height
+
+        Raises:
+            TypeError: if height is not an integer
+            ValueError: if height is less than zero
+
+
+        """
+
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
+
+    def area(self):
+        """ calculates the Rectangle area
+
+        Returns:
+            rectangle area
+
+
+        """
+
+        return self.width * self.height
+
+    def perimeter(self):
+        """ calculates the Rectangle perimeter
 
         Returns:
             rectangle perimeter
@@ -103,19 +112,7 @@ class Rectangle:
 
         return (2 * self.width) + (2 * self.height)
 
-      def area(self):
-        """ calculates the Rectangle area
-
-        Returns:
-            rectangle area
-
-
-        """
-
-        return self.width * self.height
-
-
-     def __str__(self):
+    def __str__(self):
         """ returns the Rectangle #
 
         Returns:
@@ -134,10 +131,10 @@ class Rectangle:
         return rectangle[:-1]
 
     def __repr__(self):
-        """ returns the string represantion of the instance
+        """ this returns the string represantion of the instance
 
         Returns:
-            string represenation of the object
+           A string represenation of the object
 
         """
 
