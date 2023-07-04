@@ -7,7 +7,7 @@ using backtracking
 """
 
 
-def isSafe(m_queen, n_queen):
+def isSafe(m_queen, nqueen):
     """ determines if the queens can or can't kill each other
     Args:
         m_queen: array that has queens positions
@@ -16,44 +16,44 @@ def isSafe(m_queen, n_queen):
         True: when queens can't kill each other
         False: when some of the queens can kill
     """
-    for i in range(n_queen):
-        if m_queen[i] == m_queen[n_queen]:
+    for i in range(nqueen):
+        if m_queen[i] == m_queen[nqueen]:
             return False
-        if abs(m_queen[i] - m_queen[n_queen]) == abs(i - n_queen):
+        if abs(m_queen[i] - m_queen[nqueen]) == abs(i - nqueen):
             return False
 
     return True
 
 
-def print_result(m_queen, n_queen):
+def print_result(m_queen, nqueen):
     """ displays the list with the Queens positions
     Args:
         m_queen: array that has queens positions
         n_queen: queen number
     """
     res = []
-    for i in range(n_queen):
+    for i in range(nqueen):
         res.append([i, m_queen[i]])
     print(res)
 
 
-def Queen(m_queen, n_queen):
+def Queen(m_queen, nqueen):
     """ executes the Backtracking algorithm
     Args:
         m_queen: array has the queens positions
         n_queen: queen number
     """
-    if n_queen is len(m_queen):
-        print_result(m_queen, n_queen)
+    if nqueen is len(m_queen):
+        print_result(m_queen, nqueen)
         return
-    m_queen[n_queen] = -1
+    m_queen[nqueen] = -1
 
-    while m_queen[n_queen] < len(m_queen) - 1:
-        m_queen[n_queen] += 1
-        if isSafe(m_queen, n_queen) is True:
+    while m_queen[nqueen] < len(m_queen) - 1:
+        m_queen[nqueen] += 1
+        if isSafe(m_queen, nqueen) is True:
 
-            if n_queen is not len(m_queen):
-                Queen(m_queen, n_queen + 1)
+            if nqueen is not len(m_queen):
+                Queen(m_queen, nqueen + 1)
 
 
 def solveNQueen(size):
