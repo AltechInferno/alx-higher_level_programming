@@ -29,10 +29,10 @@ class Rectangle:
         Throw TypeError and ValueError if some conditions are not met
         """
         if not isinstance(value, int):
-            raise TypeError("width should be integer")
+            raise TypeError("width must be integer")
 
         if value < 0:
-            raise ValueError("width should be >= 0")
+            raise ValueError("width must be >= 0")
 
         self.__width = value
 
@@ -51,9 +51,9 @@ class Rectangle:
         Throw TypeError and ValueError if some conditions are not met
         """
         if not isinstance(value, int):
-            raise TypeError("height should be an integer")
+            raise TypeError("height must be an integer")
 
         if value < 0:
-            raise ValueError("height shiould be >= 0")
+            raise ValueError("height must be >= 0")
 
         self.__height = value
