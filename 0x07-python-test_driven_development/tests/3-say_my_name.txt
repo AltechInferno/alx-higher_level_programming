@@ -1,0 +1,22 @@
+"""
+This module defines a function `say_my_name(first_name, last_name="")`.
+
+Usage:
+- `say_my_name(...)` prints "My name is <first_name> <last_name>".
+
+Examples:
+>>> say_my_name("Brennan", "Baraban")
+My name is Brennan Baraban
+
+>>> say_my_name("Cornelius Maxwell", "Jones II")
+My name is Cornelius Maxwell Jones II
+
+If no `last_name` is provided, an empty string is printed instead:
+>>> say_my_name("Brennan")
+My name is Brennan 
+
+Invalid Names:
+- `first_name` and `last_name` must be strings. Otherwise, a TypeError is raised.
+- At least one name must be provided. Otherwise, a TypeError is raised.
+"""
+
