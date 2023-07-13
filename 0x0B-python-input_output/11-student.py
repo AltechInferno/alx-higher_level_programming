@@ -11,12 +11,13 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-
+	'''Retrieve dictionary by filtering.'''
         if type(attrs) is list and all([type(y) == str for y in attrs]):
             return {k: v for k, v in self.__dict__.items() if k in attrs}
         else:
             return self.__dict__.copy()
 
     def reload_from_json(self, json):
+	 '''Load the attributes from the json.'''
        	for key, value in json.items():
             self.__dict__[key] = value
