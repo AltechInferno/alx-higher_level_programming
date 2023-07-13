@@ -7,7 +7,7 @@ import json
 
 def to_json_string(my_obj):
     """
-    to_json_string - this returns the JSON representation of an object (string):
+    to_json_string - this returns the JSON rep of an obj(string):
     Args:
         my_obj: is the string to represent
     Return: the json representation
