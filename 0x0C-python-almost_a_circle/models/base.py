@@ -9,7 +9,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """we initialize ithe nstance attributes
+        """we initialize the instance attributes
         Args:
             id (int): id of the object
         """
@@ -21,11 +21,11 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """return the JSON string rep the of list_dictionaries
+        """JSON string rep of list_dictionaries
         Args:
             list_dictionaries (obj): object
         Returns:
-            JSON string rep the of list_dictionaries
+            JSON string rep of list_dictionaries
         """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
@@ -33,10 +33,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """this writes the JSON string rep of list_objs to file
+        """writes JSON string rep of list_objs to file
         Args:
             cls (cls): class
-            list_objs (file): list of instances which inherits of Base
+            list_objs (file): list of instances which inherits Base
         """
         fn = "{:s}.json".format(cls.__name__)
         content = []
@@ -50,9 +50,9 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """this returns list of the JSON string rep json_string
+        """list of the JSON string rep json_string
         Args:
-            json_string (str): string rep a list of dictionaries
+            json_string (str): string rep list of dic
         Returns:
             list of json strings
         """
@@ -63,7 +63,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """this returns an instance with all attributes already set
+        """an instance with all attributes already set
         Args:
             dictionary (dict): dictionary
         Returns:
