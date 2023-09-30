@@ -19,7 +19,7 @@ if __name__ == "__main__":
             x_request_id = response.headers.get('X-Request-Id')
             response_content = response.read().decode('utf-8')
 
-        print(f'X-Request-Id: {x_request_id}')
+        print('X-Request-Id:', {x_request_id})
         print(response_content)
     except Exception as e:
         print(f'An error occurred: {e}')
