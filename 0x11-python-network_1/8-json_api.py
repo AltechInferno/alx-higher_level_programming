@@ -22,5 +22,5 @@ if __name__ == "__main__":
         print('X-Request-Id:', {x_request_id})
         print(response_content)
     except Exception as e:
-        print(f'An error occurred: {e}')
+        print('Not a valid JSON')
 
